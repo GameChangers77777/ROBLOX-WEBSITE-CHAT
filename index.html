@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox Fruits - Roblox(withchatfeature)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 8px;
+        }
+        .chat-container {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .message {
+            margin-bottom: 5px;
+        }
+        .message span {
+            font-weight: bold;
+        }
+        .blox-fruits-section {
+            margin-bottom: 40px;
+        }
+        .blox-fruits-section h2 {
+            color: #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 10px;
+        }
+        .blox-fruits-section p {
+            font-size: 1.1em;
+        }
+        .fruit-types {
+            margin-bottom: 20px;
+        }
+        .fruit-types h3 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .fruit-types ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <img src="roblox.webp" alt="Background Image">
+    </div>
+    <header>
+        <h1>Blox Fruits - Roblox</h1>
+    </header>
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#fruits">Fruits</a>
+    </nav>
+    <div class="container">
+        <div class="blox-fruits-section" id="blox-fruits-section">
+            <h2>Blox Fruits Information</h2>
+            <p>Blox Fruits is a popular Roblox game that offers players an immersive experience filled with adventure and discovery. Here are some key details about Blox Fruits:</p>
+            <ul>
+                <li>Explore vast islands and uncover hidden treasures.</li>
+                <li>Engage in epic battles against tough enemies.</li>
+                <li>Unlock unique abilities by consuming different fruits found throughout the game.</li>
+                <li>Team up with friends to take down powerful bosses and conquer challenges.</li>
+                <li>Customize your character with a variety of accessories and weapons.</li>
+            </ul>
+        </div>
+        <div class="fruit-types">
+            <h3>Fruit Types:</h3>
+            <ul>
+                <li><strong>Devil Fruit:</strong> Grants the eater a special super-human power. These fruits can be found under trees, bought from the fruit dealer, or obtained from other players.</li>
+                <li><strong>Logia Fruit:</strong> Allows the user to create, control, and transform into a specific element or force of nature.</li>
+                <li><strong>Zoan Fruit:</strong> Grants the user the ability to transform into a specific animal or an anthropomorphic hybrid, enhancing physical strength and speed.</li>
+                <li><strong>Paramecia Fruit:</strong> Gives the user superhuman abilities that can affect their body, manipulate the environment, or produce substances.</li>
+            </ul>
+        </div>
+        <div class="chat-container" id="chat-container">
+            <div class="message"><span>User1:</span> Hello everyone!</div>
+            <div class="message"><span>User2:</span> Hi there!</div>
+        </div>
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("message-input");
+            var message = messageInput.value.trim();
+            if (message !== "") {
+                var chatContainer = document.getElementById("chat-container");
+                var newMessage = document.createElement("div");
+                newMessage.className = "message";
+                newMessage.innerHTML = "<span>You:</span> " + message;
+                chatContainer.appendChild(newMessage);
+                messageInput.value = "";
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+        }
+    </script>
+	<marquee scrollamount="0" direction="left"><img src="video.gif"></marquee
+<marquee scrollamount="0" directon="right"><img src="ansh.jpg"></marquee>
+</body>
+</html>
